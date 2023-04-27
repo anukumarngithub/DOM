@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+   <!-- <h1>Inline  EventListener</h1>
+    <button onclick="helloworld()">click here</button>
+
+    <script>
+        function helloworld() {
+            alert("hello world!");
+        }
+    </script>   -->
+
+   <!-- <h1>Inline Properties</h1>
+    <button>click here</button>
+
+    <script>
+        let btn = document.querySelector('button');
+
+        btn.onclick = () => {
+            alert("Hello World!");
+        }
+    </script> -->
+
+    <h1>Event Listener method</h1>
+    <button>click here</button>
+
+    <script>
+        let btn = document.querySelector('button');
+        btn.addEventListener("click", helloworld);
+        btn.addEventListener("click", helloworld1);
+        function helloworld () {
+            alert("Hii Anu");
+        }
+        function helloworld1 () {
+            alert("How are You");
+        }
+    </script>
+</body>
+</html>

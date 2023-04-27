@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clonenode</title>
+</head>
+
+<body>
+    <h1>clone node method example</h1>
+
+    <ul>
+        <li>item 1</li>
+    </ul>
+
+
+
+    <!--  clone node method 
+    <script>
+      /*  let ulElement = document.querySelector('ul');
+
+        let liElement = document.querySelector('li');
+
+        setInterval(() =>  {
+            ulElement.appendChild(liElement.cloneNode(true));
+        }, 2000);    */
+
+
+        let ulElement = document.querySelector('ul');
+        let liElement = document.createElement('li');
+        liElement.textContent = 'item 1';
+
+        ulElement.appendChild(liElement);
+        
+    </script>   -->
+
+
+    <!-- Create Elements dynamically by looping the Array data and add it to the DOM-->
+    <script>
+
+        let animals = ['dog', 'tiger', 'lion'];
+
+        let ulElement = document.querySelector('ul');
+
+        for (let i of animals) {
+            let liElement = document.createElement('li');
+            liElement.textContent = i;
+            ulElement.appendChild(liElement);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons Change</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        button {
+            display: block;
+            margin: 25px;
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button class="green undo redo" onclick="green()">click to change backgroundcolor green </button>
+    <button class="red undo redo" onclick="red()">click to change backgroundcolor red </button>
+    <button class="blue undo redo" onclick="blue()">click to change backgroundcolor blue </button>
+    <button onclick="undo()">click to undo </button>
+    <!--<button onclick="redo()">click to undo </button>-->
+
+   <script>
+        function green() {
+            document.getElementsByClassName('green')[0].style.backgroundColor = 'green';
+        }
+        function red() {
+            document.getElementsByClassName('red')[0].style.backgroundColor = 'red';
+        }
+        function blue() {
+            document.getElementsByClassName('blue')[0].style.backgroundColor = 'blue';
+        }
+        function undo() {
+            let buttons = document.getElementsByClassName('undo');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = 'Transparent';
+        }
+    }
+</script>
+
+    <!--<script>
+        let previousColors = [];
+
+        function green() {
+            let button = document.getElementsByClassName('green')[0];
+            previousColors.push(button.style.backgroundColor);
+            button.style.backgroundColor = 'green';
+        }
+
+        function red() {
+            let button = document.getElementsByClassName('red')[0];
+            previousColors.push(button.style.backgroundColor);
+            button.style.backgroundColor = 'red';
+        }
+
+        function blue() {
+            let button = document.getElementsByClassName('blue')[0];
+            previousColors.push(button.style.backgroundColor);
+            button.style.backgroundColor = 'blue';
+        }
+
+        function undo() {
+            let buttons = document.getElementsByClassName('undo');
+            for (let i = 0; i < buttons.length; i++) {
+                previousColors.push(buttons[i].style.backgroundColor);
+                buttons[i].style.backgroundColor = 'transparent';
+            }
+        }
+
+        function redo() {
+            let buttons = document.getElementsByClassName('redo');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = previousColors.pop();
+            }
+        }
+    </script>-->
+
+       
+   
+
+    
+</body>
+
+</html>

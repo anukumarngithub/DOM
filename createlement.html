@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>create a element using appendchild</h1>
+
+
+    <script>
+        //create element
+        let para = document.createElement('p');
+
+        //we can call two methods ---textcontent and innerHTML---
+        para.textContent='this is dynamically created paragraph'; // add content para after appendchild is done
+
+        //find the parent
+        let body = document.querySelector('body');
+
+        /*attach the element using appendchild method
+        body.appendChild(para);*/
+
+        /*first we find reference element which we want to place before */
+        let h1element = document.querySelector('h1');
+
+        /*call insertbefore method
+        body.insertBefore(para, h1element);*/
+
+        /* call removeChild method 
+        body.removeChild(para);*/
+
+        para.remove();
+    </script>
+</body>
+</html>

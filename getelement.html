@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing the DOM</title>
+
+    <style>
+        html {
+            font-family: monospace;
+        }
+        body {
+            margin: 0px auto;
+            padding: 0px;
+            box-sizing: border-box;
+            max-width: 428px;
+        }
+        div,p {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #1a1a1a;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #5f5b5b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="main">Accessing the DOM Elements</h1>
+
+    <h2> Using the Id selector</h2>
+    <div id="header">Access the Elements by <strong>getElementById()</strong></div>
+    
+
+    <h2> Using the class selector class selecotor only work with <bold style="color:black">for loop</bold></h2>
+    <div class="header">Access the Elements by <strong>getElementByClassName()</strong></div>
+    <div class="header">Access the Elements by <strong>getElementByClassName()</strong></div>
+
+    <h2> Using the Tag selector</h2>
+    <p>Access the Elements by <strong>getElementByTagName()</strong></p>
+    <p>Access the Elements by <strong>getElementByTagName()</strong></p>
+
+    <h2> Using the query selector</h2>
+    <div id="query">Access the Elements by <strong>querySelector()</strong></div>
+
+    <h2> Using the query selector all <bold style="color:black">for loop and forEach</bold></h2>
+    <div class="query-all">Access the Elements by <strong>querySelectorAll()</strong></div>
+    <div class="query-all">Access the Elements by <strong>querySelectorAll()</strong></div>
+
+    <h2> Date and Time </h2>
+    <div><button id="date" onclick="date()">show date and time</button></div>
+
+
+
+    <script>
+        document.getElementById('header');
+        header.style.background='pink';
+        document.getElementById('header').innerHTML='NEW Access the Elements by <strong>getElementById()</strong>';
+
+        /*we can easily  change date and time using document.write
+        function date() {
+            document.write(Date());
+        }*/
+    </script>
+
+
+    <script>
+        let classnames = document.getElementsByClassName('header');
+        for(let i=0;i<classnames.length;i++)
+        classnames[i].style.backgroundColor='lightblue';
+    </script>
+
+    <script>
+        let tagnames = document.getElementsByTagName('p');
+        for(let i=0;i<tagnames.length;i++) {
+            tagnames[i].style.color='green';
+            tagnames[i].style.backgroundColor='black';
+        }
+    </script>
+
+
+    <script>
+        let queryelement = document.querySelector('#query');
+        queryelement.style.backgroundColor = 'black';
+        queryelement.style.color = 'white';
+    </script>
+
+    <script>
+        let queryselect = document.querySelectorAll('.query-all');
+        for(let i=0;i<queryselect.length;i++) {
+            queryselect[i].style.backgroundColor='red';
+        }
+        /*queryselect.forEach(element => {
+            element.style.backgroundColor='red';     //this also work only queryselector-all
+        })*/
+    </script>
+    <script>
+        function date() {
+        document.getElementById('date').innerHTML='Date : '+ Date();
+    }
+    </script>
+     
+
+
+</body>
+</html>

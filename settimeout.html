@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom and Jvascript</title>
+</head>
+<body>
+    <div>we will see the diffrence between javascript and dom</div>
+    <div>clcik the below button to open the figmatic company website</div>
+    <button onclick="newwindow()">click here</button>
+
+
+<script>
+    function newwindow() {
+        let url= "https://www.figmatic.co";
+        let windowOpen = window.open(url, '', 'width=550&height=400');
+
+       /* setTimeout(() => {
+            windowOpen.close();
+        }, 5000); */  //automatic close after 5second
+    }
+</script>
+
+
+
+</body>
+</html>
